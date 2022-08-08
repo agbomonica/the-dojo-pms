@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-// Styles
+// Styles & Images
 import "./Navbar.css";
 import Temple from "../assets/temple.svg";
 

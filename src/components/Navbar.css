@@ -11,7 +11,7 @@
   margin: 0 auto;
 }
 
-.header .header__logo {
+.header__logo {
   font-weight: bold;
   color: var(--heading-color);
   letter-spacing: 1px;

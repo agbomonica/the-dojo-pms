@@ -9,6 +9,12 @@
   --bg-color: #f4f4f4;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html:focus-within {
   scroll-behavior: smooth;
 }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { projectAuth } from "../firebase/config";
+import { projectAuth, projectFirestore } from "../firebase/config";
 import { useAuthContext } from "./useAuthContext";
 
 export const useLogin = function () {
@@ -18,8 +18,13 @@ export const useLogin = function () {
         password
       );
 
-      console.log(response);
       if (!response) throw new Error("Incorrect Credentials");
+
+      // update online status
+      projectFirestore
+        .collection("users")
+        .doc(response.user.uid)
+        .update({ online: true });
 
       // update global state
       dispatch({ type: "LOGIN", payload: response.user });

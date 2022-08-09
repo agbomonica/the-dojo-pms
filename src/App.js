@@ -19,9 +19,10 @@ function App() {
   const { user, authIsReady } = useAuthContext();
   return (
     <div className="App">
+      {/* Render components only when auth is ready */}
       {authIsReady && (
         <BrowserRouter>
-          <Sidebar />
+          {user && <Sidebar />}
           <div className="container">
             <Navbar />
             <Routes>

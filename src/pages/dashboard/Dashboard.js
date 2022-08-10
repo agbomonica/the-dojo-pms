@@ -1,9 +1,14 @@
-// Styles
+// Components
 
+// Styles
 import "./Dashboard.css";
 
 function Dashboard() {
-  return <div>Dashboard</div>;
+  return (
+    <div>
+      <p>Dashboard</p>
+    </div>
+  );
 }
 
 export default Dashboard;

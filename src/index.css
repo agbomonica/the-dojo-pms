@@ -99,6 +99,7 @@ textarea {
 
 textarea {
   min-height: 160px;
+  resize: vertical;
 }
 
 .error {
